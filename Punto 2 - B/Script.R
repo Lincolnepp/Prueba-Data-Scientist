@@ -1,0 +1,38 @@
+NORMAL_PUNTO_2_V1 = function(N,MIU,SIGMA,QQ=T){
+  
+  A = rnorm(N,MIU,SIGMA)
+  
+  R = table(A>500)/length(A)*100
+  
+  
+  hist(A, main = "Normal DIstribution")
+  
+  if (QQ == T) {
+    return(A)
+  }else{
+    return(R)
+  }
+}
+
+NORMAL_PUNTO_2_V1(10000,468.073736,15.7,F)
+
+
+# 
+
+NORMAL_PUNTO_2_V2 = function(N,MIU,SIGMA,QQ=T){
+  
+  A = rnorm(N,MIU,SIGMA)
+  
+  R = table(A>83.333)/length(A)*100
+  
+  
+  hist(A, main = "Normal Distribution")
+  
+  if (QQ == T) {
+    return(A)
+  }else{
+    return(R)
+  }
+}
+
+NORMAL_PUNTO_2_V2(10000,51.406,15.7,F)
